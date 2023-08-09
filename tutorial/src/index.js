@@ -1,18 +1,34 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import './index.css'
 
-const Greetings = () => {
+const BookList = () => {
   return (
-    <div>
-      <h1>My First Component</h1>
-    </div>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   )
 }
 
-// const Greetings = () => {
-//   return React.createElement('h2', {}, 'Hello world!')
-// }
+const Book = () => {
+  return (
+    <article class="book">
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  )
+}
+
+const Image = () => {
+  return <img alt="book_image" src="./images/book_1.jpg" />
+}
+const Title = () => <h2>Fourth Wing (The Empyrean, 1) </h2>
+const Author = () => <h2>Rebecca Yarros</h2>
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<Greetings />)
+root.render(<BookList />)
