@@ -2,39 +2,39 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
+const books = [
+  {
+    author: 'Jordan Moore',
+    title: 'Interesting Facts For Curious Minds',
+    img: './images/book_1.jpg',
+    id: 1,
+  },
+  {
+    author: 'James Clear',
+    title: 'Atomic Habits',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
+    id: 2,
+  },
+]
+
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      {books.map((book) => {
+        return <Book {...book} key={book.id} />
+      })}
     </section>
   )
 }
 
-const Book = () => {
+const Book = ({ img, title, author }) => {
   return (
-    <article class="book">
-      <Image />
-      <Title />
-      <Author />
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4> {author} </h4>
     </article>
   )
-}
-
-const Image = () => {
-  return <img alt="book_image" src="./images/book_1.jpg" />
-}
-const Title = () => <h2>Fourth Wing (The Empyrean, 1) </h2>
-const Author = () => {
-  const inlineHeadingStyles = {
-    color: '#617d98',
-    fontSize: '0.75rem',
-    marginTop: '0.5rem',
-  }
-
-  return <h4 style={inlineHeadingStyles}>Rebecca Yarros</h4>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

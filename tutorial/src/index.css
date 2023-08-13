@@ -18,12 +18,6 @@ body {
   gap: 2rem;
 }
 
-@media screen and (min-width: 768px) {
-  .booklist {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .book {
   background: #fff;
   border-radius: 1rem;
@@ -41,8 +35,18 @@ body {
 }
 
 .book h4 {
-  /* won't work */
-  color: red;
-  /* will work */
+  color: #617d98;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
   letter-spacing: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+.book p {
+  margin: 1rem 0 0.5rem;
 }
