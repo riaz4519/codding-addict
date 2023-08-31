@@ -3,7 +3,7 @@ export const data = [
   { id: 2, name: 'peter' },
   { id: 3, name: 'susan' },
   { id: 4, name: 'anna' },
-];
+]
 
 export const people = [
   { id: 1, name: 'bob', nickName: 'Stud Muffin' },
@@ -20,4 +20,10 @@ export const people = [
     ],
   },
   { id: 4, name: 'david' },
-];
+]
+
+export const personProfiles = [
+  { id: 1, name: 'Fahim Md riaz', age: 25, hobby: 'Like to code' },
+  { id: 2, name: 'Mohinee', age: 25, hobby: 'like to make stuff' },
+  { id: 3, name: 'Mokim', age: 22, hobby: 'like to make songs' },
+]
