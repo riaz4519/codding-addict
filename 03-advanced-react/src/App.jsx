@@ -1,5 +1,5 @@
-import Starter from './tutorial/01-useState/starter/05-useState-gotcha'
-import Final from './tutorial/01-useState/final/05-useState-gotcha'
+import Starter from './tutorial/03-conditional-rendering/starter/02-multiple-returns-fetch-data'
+import Final from './tutorial/03-conditional-rendering/final/02-multiple-returns-fetch-data'
 import { data } from './data'
 
 function App() {
