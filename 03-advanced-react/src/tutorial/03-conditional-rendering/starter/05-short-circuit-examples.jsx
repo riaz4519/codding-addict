@@ -11,7 +11,41 @@ const ShortCircuitExamples = () => {
   return (
     <div>
       <h2>{text || 'Default Value'}</h2>
-      {/* {text && } */}
+      {text && (
+        <div>
+          <h2>Whatever return</h2>
+          <h2>{name}</h2>
+        </div>
+      )}
+
+      {!text && (
+        <div>
+          <h2>Whatever return</h2>
+          <h2>{name}</h2>
+        </div>
+      )}
+
+      {user && <SomeComponent user={user.name} />}
+      <h2 style={{ margin: '1rem 0' }}>Ternary Operator</h2>
+      <button0 className="btn"> {isEditing ? 'edit' : 'add'} </button0>
+      {user ? (
+        <div>
+          <h4>Hello there user {user.name}</h4>
+        </div>
+      ) : (
+        <div>
+          <h2>Please login</h2>
+        </div>
+      )}
+    </div>
+  )
+}
+
+const SomeComponent = ({ name }) => {
+  return (
+    <div>
+      <h4>Hello there {name}</h4>
+      <button className="btn">log out</button>
     </div>
   )
 }
