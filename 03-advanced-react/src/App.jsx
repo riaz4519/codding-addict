@@ -1,12 +1,10 @@
-import Starter from './tutorial/02-useEffect/starter/05-cleanup-function.jsx'
-import Final from './tutorial/02-useEffect/final/05-cleanup-function.jsx'
-import { data } from './data'
+import Starter from './tutorial/06-forms/starter/01-controlled-inputs'
+import Final from './tutorial/06-forms/final/01-controlled-inputs'
 
 function App() {
   return (
     <div className="container">
       <Starter />
-      {/* <Final /> */}
     </div>
   )
 }

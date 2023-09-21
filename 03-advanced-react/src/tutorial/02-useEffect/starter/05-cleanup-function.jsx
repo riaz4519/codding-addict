@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 const CleanupFunction = () => {
   const [toggle, setToggle] = useState(false)
-
+  console.log('Render')
   return (
     <div>
       <button className="btn" onClick={() => setToggle(!toggle)}>
@@ -16,7 +16,11 @@ const CleanupFunction = () => {
 
 const RandomComponent = () => {
   useEffect(() => {
-    console.log('logged from random component')
+    const someFunc = () => {
+      // logic goes here
+    }
+    window.addEventListener('scroll', someFunc)
+    return () => window.removeEventListener('scroll', someFunc)
   })
 
   return <h1>Hello There</h1>
