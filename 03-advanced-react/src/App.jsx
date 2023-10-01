@@ -1,10 +1,9 @@
-import Starter from './tutorial/07-useRef/starter/01-useRef-basics'
-import Final from './tutorial/07-useRef/final/01-useRef-basics'
+import Navbar from "./tutorial/09-context-api/starter/prop-drilling/Navbar"
 
 function App() {
   return (
     <div className="container">
-      <Starter />
+      <Navbar />
     </div>
   )
 }
