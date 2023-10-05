@@ -1,9 +1,9 @@
-import Navbar from "./tutorial/09-context-api/starter/prop-drilling/Navbar"
+import Starter from "./tutorial/11-performance/starter/03-hooks/index"
 
 function App() {
   return (
     <div className="container">
-      <Navbar />
+      <Starter />
     </div>
   )
 }
